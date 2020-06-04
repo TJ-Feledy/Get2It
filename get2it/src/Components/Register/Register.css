@@ -1,0 +1,105 @@
+.register {
+  height: 100%;
+  width: 100vw;
+  /* max-width: 400px; */
+  overflow: auto;
+  padding: 5px 20px;
+}
+.register::-webkit-scrollbar {
+  height: 20px;
+  width: 8px;
+}
+.register::-webkit-scrollbar-thumb {
+  background: rgba(192, 192, 192, 0.281);
+  border-radius: 30px;
+}
+.pageTitle {
+  width: 100%;
+  color: silver;
+  padding: 20px 0 0;
+  font-size: 1.2rem;
+}
+.registerLogo {
+  width: 250px;
+}
+.inputContainer {
+  display: flex;
+  margin: 10px;
+  align-items: center;
+  border-image: radial-gradient(silver, black) 50;
+  border-bottom: 2px solid;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+#registerIcon {
+  color: rgba(192, 192, 192, 0.65);
+  margin: 0px 20px;
+}
+.registerButton {
+  max-width: 287px;
+  width: 80%;
+  margin: 40px 0;
+  padding: 10px 0;
+  border-radius: 50px;
+  border: 2px solid rgb(212, 211, 211);
+  background-color: rgba(255, 255, 255, 0);
+  color: silver;
+}
+.registerButton:hover {
+  background-color: var(--textColor);
+  color: rgb(15, 15, 53);
+}
+input {
+  width: 100%;
+  text-align: left;
+  margin: 20px 0;
+  padding: 0px 15px 8px;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  color: rgb(236, 236, 236);
+}
+input:focus {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  outline: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-transition-delay: 99999s;
+  -webkit-text-fill-color: rgb(236, 236, 236);
+}
+::placeholder {
+  color: silver;
+}
+p.loginMessage {
+  color: rgba(192, 192, 192, 0.65);
+  margin-bottom: 0px;
+}
+.loginLink {
+  color: silver;
+  padding-left: 10px;
+}
+.loginLink:hover {
+  color: white;
+}
+p {
+  color: var(--textColor);
+}
+.error {
+  margin: 0;
+  padding: 2px 4px;
+  color: rgb(111, 255, 106);
+  background-color: rgba(255, 255, 255, 0.377);
+  border-radius: 10px;
+  /* -webkit-text-stroke: .3px black; */
+  font-weight: 700;
+  text-shadow: 2px 2px 3px black;
+}

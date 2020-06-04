@@ -1,0 +1,49 @@
+.notificationContainer {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  background-color: rgb(238, 238, 238);
+  color: black;
+  border-radius: 10px 10px 10px 10px;
+  border: 2px solid rgb(143, 143, 143);
+  padding: 5px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  transition: top 0.5s ease;
+
+}
+.notificationBody {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  color: black;
+  font-size: .9rem;
+}
+.notificationIcon {
+  align-self: flex-start;
+  margin: 4px;
+  margin-top: 3px;
+  color: rgb(124, 124, 124);
+}
+
+.notifyText {
+
+}
+.notifyName {
+  color: dodgerblue;
+  font-weight: bold;
+}
+.notifyStart {
+  color: forestgreen;
+  font-weight: bold;
+}
+.notifyEnd {
+  color: firebrick;
+  font-weight: bold;
+}
+.notifyDate {
+  color: blueviolet;
+  font-weight: bold;
+}

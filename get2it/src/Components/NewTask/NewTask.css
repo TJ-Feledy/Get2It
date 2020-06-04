@@ -1,0 +1,622 @@
+@import "../../../node_modules/react-toggle-switch/dist/css/switch.min.css";
+.taskModal{
+  border: 1px solid grey;
+  /* background: none */
+  width: 100%;
+  height: 95%;
+  padding:5px;
+  overflow: auto;
+}
+.taskModal::-webkit-scrollbar {
+    height: 20px;
+    width: 8px;
+    display: none;
+  }
+.taskModal::-webkit-scrollbar-thumb {
+  background: rgba(192, 192, 192, 0.281);
+  border-radius: 30px;
+}
+    form {
+      display: inline;
+      background-color: none;
+    }
+    
+    button {
+      margin: 1px;
+      cursor: pointer;
+    }
+    
+    .NewTask-Tittle{
+      font-weight: bold;
+      font-size: 2em;
+      text-transform: capitalize;
+    }
+    /* .to-do-app {
+      box-sizing: border-box;
+      width: 550px;
+      margin: 50px auto 0 auto;
+      text-align: center;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #252525;
+    }
+     */
+    .header {
+      /* background: rgb(145, 144, 144); */
+      padding: 7px;
+      /* border-radius: 3px 3px 0 0 ; */
+      
+    }
+    h1 {
+        font-family: sans-serif;
+      font-size: 36px;
+      margin: 0;
+      color: white;
+      font-weight: bold;
+     
+    }
+    .create-new {
+      /* border-top: 1px solid rgb(255, 255, 255); */
+      width: 100%;
+      border-image: radial-gradient(silver, black) 50;
+    border-bottom: 2px solid;
+      }
+      .create-new input {
+        box-sizing: border-box;
+        width: 70%;
+        padding: 10px;
+        font-size: 18px;
+        border: 1px solid rgb(139, 139, 139);
+        margin:5px 5px 25px 5px
+      }
+    
+    .create-new button {
+      width: 25%;
+      background: #eee;
+      box-sizing: border-box;
+      padding: 10px;
+      font-size: 18px;
+      margin: 0;
+      border: none;
+      /* border-left: 1px solid #999; */
+      
+    }
+    .create-new button :hover {
+      background: #ddd;
+    }
+  
+    
+    .items-list {
+      background: #282727;
+      border-radius: 3px;
+    }
+    
+    .to-do-item {
+      padding: 10px 0 10px 0;
+      margin: 1px 0 1px 0;
+      /* border-top: 1px solid darken(#138796, 20%); */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px;
+      color: white;
+      font-weight: lighter;
+      user-select: none;
+    }
+    
+    .name {
+      margin-left: 10px;
+      
+    }
+    .name input {
+      width: 350px;
+      color: #333;
+      padding: 5px;
+      border: none;
+      border-radius: 1px;
+    }
+    
+    .actions {
+      margin-right: 10px;
+      
+    }
+    .actions button {
+      padding: 7px;
+      border-radius: 2px;
+      border: none;
+      background: #FFB923;
+      background: #E5FF3D;
+      background: #333;
+      color: white;
+      font-weight: lighter;
+      box-shadow: 0 0 5px darken(#138796, 12%);
+    }
+    .fa-clock{
+      margin: 0 10px;
+    }
+    @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+  
+  * {
+    /* padding: 0;
+    margin: 0; */
+    box-sizing: border-box;
+    font-family: "Source Sans Pro", helvetica;
+  }
+  .newTaskContainer::-webkit-scrollbar {
+    height: 20px;
+    width: 8px;
+    /* display: none; */
+  }
+  .newTaskContainer::-webkit-scrollbar-thumb {
+    background: rgba(192, 192, 192, 0.281);
+    border-radius: 30px;
+  }
+  .newModal {
+    overflow: auto;
+    padding-top: 50px;
+  }
+  .reUseModal {
+    overflow: auto;
+    padding-top: 50px;
+  }
+  .reUseModal::-webkit-scrollbar {
+    height: 20px;
+    width: 8px;
+    /* display: none; */
+  }
+  .reUseModal::-webkit-scrollbar-thumb {
+    background: rgba(192, 192, 192, 0.281);
+    border-radius: 30px;
+  }
+  .newTaskContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    overflow: auto !important;
+    width: 100%;
+    height: 100%;
+    margin-top: -25px;
+    padding: 0 10px;
+  }
+  .date-picker-container {
+    width: 100%;
+    /* margin-top: -5px; */
+  }
+  .retrievedDate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .retrievedDate input {
+    padding-right: .2rem;
+  }
+  
+  input {
+    width: 100%;
+    border: 2px solid #504f4f;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+  
+  input:focus {
+    border-color: palevioletred;
+  }
+  
+  button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+  }
+  svg:not(:root).svg-inline--fa {
+    /* margin-left:5%; */
+  }
+  
+  button:focus {
+    color: lightblue;
+  }
+  .calender-date {
+    width: 100%;
+    border-bottom: 2px solid;
+    border-image: radial-gradient(silver, black) 50;
+    margin-bottom: 5%;
+    /* margin-left: 3%; */
+  }
+  .calender-date svg{
+    
+    margin-left: 25%;
+  }
+  .calendar {
+    /* margin-right: 40px; */
+    box-shadow: 0 1px 5px #aeaeae;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 999;
+    position: absolute;
+    left: 15px;
+    top: 50px;
+    width: 90%;
+    background-image: radial-gradient(circle at 50% 30%,rgb(110, 110, 110) 5%,rgb(110, 110, 110) 5%,rgb(6, 14, 26) 90%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    background: rgba(7, 7, 7, 0.397);
+    
+  }
+  
+  .week {
+    display: flex;
+  }
+  
+  .week:not(:first-of-type) {
+    border-top: 1px solid #eaeaea;
+  }
+  
+  .week.day-labels {
+    background: rgb(12, 12, 12);
+  }
+  
+  .week.day-labels .day {
+    cursor: default;
+    color: silver;
+  }
+  
+  .day {
+    width: calc(100% / 7);
+    padding: 1rem 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    color: silver;
+  }
+  
+  .week:not(.day-labels) .day:not(:last-of-type) {
+    border-right: 1px solid #eaeaea;
+  }
+  
+  .week:not(.day-labels) .day:hover {
+    background-color: #e7e7e7;
+  }
+  
+  .day.is-today.is-today {
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    background-color: black;
+  }
+  
+  .week:not(.day-labels) .day.is-selected.is-selected {
+    background-color: rgb(138, 0, 46);
+    color: #fff;
+  }
+  
+  .color-white {
+    color: #fff;
+  }
+  
+  .text-bold {
+    font-weight: bold;
+  }
+  
+  .day[disabled] {
+    color: #000000b9;
+    cursor: not-allowed !important;
+    background: inherit !important;
+  }
+  
+  example-wrapper { 
+      min-height: 280px; 
+      align-content: flex-start; 
+  }
+  .example-wrapper p, .example-col p {
+      margin: 20px 0 10px; 
+  }
+  .example-wrapper p:first-child, .example-col p:first-child { 
+      margin-top: 0; 
+  }
+  .example-col { 
+      display: inline-block; 
+      vertical-align: top; 
+      padding-right: 20px; 
+      padding-bottom: 20px;
+  }
+  .example-config {
+      margin: 0 0 20px; 
+      padding: 20px; 
+      background-color: rgba(0,0,0,.03);
+      border: 1px solid rgba(0,0,0,.08); 
+  }
+  .event-log { 
+      margin: 0; 
+      padding: 0; 
+      max-height: 100px; 
+      overflow-y: auto; 
+      list-style-type: none; 
+      border: 1px solid rgba(0,0,0,.08); 
+      background-color: white; 
+  }
+  .event-log li {
+      margin: 0; 
+      padding: .3em; 
+      line-height: 1.2em; 
+      border-bottom: 1px solid rgba(0,0,0,.08); 
+  }
+  .event-log li:last-child { 
+      margin-bottom: -1px;
+  }
+  .form{
+    background: transparent;
+  }
+  
+  main {
+    margin: 100px auto;
+  }
+  
+  .color-indicator {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: none;
+  
+    transition: transform .2s;
+  }
+  .color-indicator:hover {
+    transform: scale(1.1);
+  }
+  .lable{
+    
+    
+    
+  }
+  .calender-date{
+    display: flex;
+    align-content: space-around;
+    justify-content: center;
+  }
+  .line{
+    background-color:  rgb(65, 63, 63); 
+     height: 5 
+  }
+  .endTime{
+    display: flex;
+    color: #999;
+    border-bottom: 2px solid;
+    border-image: radial-gradient(silver, black) 50;
+  }
+  .datePick {
+    display: flex;
+    color: rgb(153, 153, 153);
+  }
+  .startTime{
+    display: flex;
+    width: 100%;
+    color: #999;
+    border-bottom: 2px solid;
+    border-image: radial-gradient(silver, black) 50;
+  }
+  .Title2{
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-left: 0px;
+
+    /* margin-left: -170px; */
+  }
+  .timeBlock {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: none;
+  }
+   
+  .lableColor{
+    margin-left: 350px;
+  }
+  
+  .NewTask-Tittle2{
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-left: -130px;
+    margin-top: -50px;
+    text-transform: uppercase;
+  }
+  .lableIcon{
+   background-color: #fff;
+  }
+  .newTaskLableName {
+    color: white;
+  }
+  .newTaskInput {
+    border: 1px solid grey;
+    background: rgba(76, 175, 80, 0.1);
+  }
+  .dropdown-item {
+    /* border:1px solid red; */
+  }
+  .displayIcons {
+    display: flex;
+  
+  }
+  .iconOne {
+    /* border:1px solid rgb(182, 42, 170); */
+    display: none;
+    
+  }
+  .iconTwo {
+    /* border:1px solid red; */
+    display: none;
+  }
+  .iconThree {
+    /* border:1px solid rgb(15, 158, 58); */
+    display: none;
+  }
+  .iconFour {
+    /* border:1px solid rgb(182, 42, 170); */
+    display: none;
+    
+  }
+  .iconFive {
+    /* border:1px solid red; */
+    display: none;
+  }
+  .iconSix {
+    /* border:1px solid rgb(15, 158, 58); */
+    display: none;
+  }
+  #iconOne {
+    /* border:1px solid rgb(182, 42, 170); */
+  
+  }
+  #iconTwo {
+    /* border:1px solid red; */
+  
+  }
+  #iconThree {
+    /* border:1px solid rgb(15, 158, 58); */
+  
+  }
+  #dropdown-item-button {
+    /* margin-top: -16%; */
+    background-color: white;
+    color: dodgerblue;
+    margin: 2px 5px;
+  }
+  .completeBtnContainer {
+    margin-top: 20px;
+  }
+  .addIcon {
+    display: flex;
+    justify-content: center;
+  }
+  .addIcon #icon {
+    color: dodgerblue;
+  }
+  .iconDropContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px; 
+    padding-bottom: 20px;
+    border-bottom: 2px solid;
+    border-image: radial-gradient(silver, black) 50;   
+  }
+  .startCont {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  #startClock{
+    width: 50px;
+    height: 50px;
+    color: grey;
+  }
+  .stupid {
+    margin-left: 20px;
+  }
+  .timeContainer {
+    display: flex;
+    align-items: center;
+  }
+  .rc-time-picker-clear-icon:after{
+    /* width: 50px;
+    height: 50px; */
+    color: black;
+    font-size: small;
+  }
+  .rc-time-picker-clear {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  color: black;
+  width: 28px;
+  height: 28px;
+  background-color: white;
+  border-radius: 5px;
+  top: 20px;
+  left: 145px;
+}
+.rc-time-picker-clear-icon {
+  color: black;
+
+}
+.pickTime {
+  margin-left: 20px;
+}
+
+.switchContainer {
+  display: flex;
+  /* flex-flow: column; */
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.notifySwitch {
+  height: 20px;
+  width: 42px;
+  background-color: transparent;
+  /* margin-bottom: 10px; */
+}
+.switch-toggle {
+  height: 17px;
+  width: 17px;
+}
+.notifySwitchText {
+  display: flex;
+  align-items: center;
+  font-size: .8rem;
+  margin-bottom: 3px;
+  color: white;
+}
+.blue {
+  color: rgb(30, 131, 231);
+}
+.red {
+  color: rgb(209, 0, 0);
+}
+.yellow {
+  color: rgb(207, 187, 0);
+}
+.green {
+  color: rgb(0, 129, 0);
+}
+.googleContainer {
+  display: flex;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+  margin: 0 3px 0 4px;
+  padding: 2px;
+  height: 16px;
+  font-weight: bolder;
+}
+.react-add-to-calendar__dropdown {
+  display: flex;
+  justify-content: center;
+}
+.google-link {
+  border: solid 1px silver;
+  border-radius: 3px;
+  color: silver;
+  padding: 3px;
+}
+.google-link:hover {
+  background-color: silver;
+  color: white;
+}

@@ -1,0 +1,51 @@
+.nav {
+  box-sizing: border-box;
+  width: 93.5%;
+  max-width: 330px;
+
+  justify-content: flex-start;
+  margin: 10px;
+}
+.appRoutes {
+  height: 94%;
+  width: 100%;
+}
+.dashboard {
+  height: 100%;
+  width: 100%;
+}
+.expired {
+  height: 200px;
+  width: 90%;
+  position: absolute;
+  top: 25%;
+  background-color: firebrick;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+}
+.expiredHead {
+  color: white;
+}
+.expired .close {
+  color: firebrick;
+  background-color: white;
+  opacity: 1;
+  top: 5px;
+  right: 5px;
+  padding: 0;
+  padding-bottom: 4px;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+.expiredGet2It {
+  color: white;
+}

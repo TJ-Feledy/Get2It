@@ -1,0 +1,514 @@
+.taskModal{
+  border: 1px solid grey;
+  /* background: none */
+  width: 100%;
+  height: 95%;
+  padding:5px;
+  }
+    form {
+      display: inline;
+      background-color: none;
+    }
+    
+    button {
+      margin: 1px;
+      cursor: pointer;
+    }
+    
+    .NewTask-Tittle{
+      font-weight: bold;
+      font-size: 2em;
+      text-transform: capitalize;
+    }
+    /* .to-do-app {
+      box-sizing: border-box;
+      width: 550px;
+      margin: 50px auto 0 auto;
+      text-align: center;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #252525;
+    }
+     */
+    .header {
+      /* background: rgb(145, 144, 144); */
+      padding: 7px;
+      /* border-radius: 3px 3px 0 0 ; */
+      
+    }
+    h1 {
+        font-family: sans-serif;
+      font-size: 36px;
+      margin: 0;
+      color: white;
+      font-weight: bold;
+     
+    }
+    .create-new {
+      /* border-top: 1px solid rgb(255, 255, 255); */
+      width: 100%;
+      border-image: radial-gradient(silver, black) 50;
+    border-bottom: 2px solid;
+      }
+      .create-new input {
+        box-sizing: border-box;
+        width: 70%;
+        padding: 10px;
+        font-size: 18px;
+        border: 1px solid rgb(139, 139, 139);
+        margin:5px 5px 25px 5px
+      }
+    
+    .create-new button {
+      width: 25%;
+      background: #eee;
+      box-sizing: border-box;
+      padding: 10px;
+      font-size: 18px;
+      margin: 0;
+      border: none;
+      /* border-left: 1px solid #999; */
+      
+    }
+    .create-new button :hover {
+      background: #ddd;
+    }
+  
+    
+    .items-list {
+      background: #282727;
+      border-radius: 3px;
+    }
+    
+    .to-do-item {
+      padding: 10px 0 10px 0;
+      margin: 1px 0 1px 0;
+      /* border-top: 1px solid darken(#138796, 20%); */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px;
+      color: white;
+      font-weight: lighter;
+      user-select: none;
+    }
+    
+    .name {
+      margin-left: 10px;
+      
+    }
+    .name input {
+      width: 350px;
+      color: #333;
+      padding: 5px;
+      border: none;
+      border-radius: 1px;
+    }
+    
+    .actions {
+      margin-right: 10px;
+      
+    }
+    .actions button {
+      padding: 7px;
+      border-radius: 2px;
+      border: none;
+      background: #FFB923;
+      background: #E5FF3D;
+      background: #333;
+      color: white;
+      font-weight: lighter;
+      box-shadow: 0 0 5px darken(#138796, 12%);
+    }
+    .fa-clock{
+      margin: 0 10px;
+    }
+    @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+  
+  * {
+    /* padding: 0;
+    margin: 0; */
+    box-sizing: border-box;
+    font-family: "Source Sans Pro", helvetica;
+  }
+  .newTaskContainer::-webkit-scrollbar {
+    height: 20px;
+    width: 8px;
+  }
+  .newTaskContainer::-webkit-scrollbar-thumb {
+    background: rgba(192, 192, 192, 0.281);
+    border-radius: 30px;
+  }
+  .newTaskContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+  .date-picker-container {
+    width: 100%;
+    /* margin-top: -5px; */
+  }
+  .retrievedDate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  input {
+    width: 100%;
+    border: 2px solid #504f4f;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+  
+  input:focus {
+    border-color: palevioletred;
+  }
+  
+  button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+  }
+  svg:not(:root).svg-inline--fa {
+    /* margin-left:5%; */
+  }
+  
+  button:focus {
+    color: lightblue;
+  }
+  .calender-date {
+  
+    border-bottom: 2px solid;
+    border-image: radial-gradient(silver, black) 50;
+    margin-bottom: 5%;
+    /* margin-left: 3%; */
+  }
+  .calender-date svg{
+    
+    margin-left: 25%;
+  }
+  /* .calendar {
+    margin-top: 0.5rem;
+    box-shadow: 0 1px 5px #aeaeae;
+    border-radius: 5px;
+    overflow: hidden;
+    
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    background: rgb(7, 7, 7);
+    
+  }
+  
+  .week {
+    display: flex;
+  }
+  
+  .week:not(:first-of-type) {
+    border-top: 1px solid #eaeaea;
+  }
+  
+  .week.day-labels {
+    background: rgb(74, 73, 73);
+  }
+  
+  .week.day-labels .day {
+    cursor: default;
+  }
+  
+  .day {
+    width: calc(100% / 7);
+    padding: 1rem 0.5rem;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .week:not(.day-labels) .day:not(:last-of-type) {
+    border-right: 1px solid #eaeaea;
+  }
+  
+  .week:not(.day-labels) .day:hover {
+    background-color: #e7e7e7;
+  }
+  
+  .day.is-today.is-today {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+  }
+  
+  .week:not(.day-labels) .day.is-selected.is-selected {
+    background-color: rgb(138, 0, 46);
+    color: #fff;
+  }
+  
+  .color-white {
+    color: #fff;
+  }
+  
+  .text-bold {
+    font-weight: bold;
+  }
+  
+  .day[disabled] {
+    color: #eaeaea !important;
+    cursor: not-allowed !important;
+    background: inherit !important;
+  } */
+  
+  example-wrapper { 
+      min-height: 280px; 
+      align-content: flex-start; 
+  }
+  .example-wrapper p, .example-col p {
+      margin: 20px 0 10px; 
+  }
+  .example-wrapper p:first-child, .example-col p:first-child { 
+      margin-top: 0; 
+  }
+  .example-col { 
+      display: inline-block; 
+      vertical-align: top; 
+      padding-right: 20px; 
+      padding-bottom: 20px;
+  }
+  .example-config {
+      margin: 0 0 20px; 
+      padding: 20px; 
+      background-color: rgba(0,0,0,.03);
+      border: 1px solid rgba(0,0,0,.08); 
+  }
+  .event-log { 
+      margin: 0; 
+      padding: 0; 
+      max-height: 100px; 
+      overflow-y: auto; 
+      list-style-type: none; 
+      border: 1px solid rgba(0,0,0,.08); 
+      background-color: white; 
+  }
+  .event-log li {
+      margin: 0; 
+      padding: .3em; 
+      line-height: 1.2em; 
+      border-bottom: 1px solid rgba(0,0,0,.08); 
+  }
+  .event-log li:last-child { 
+      margin-bottom: -1px;
+  }
+  .form{
+    background: transparent;
+  }
+  
+  main {
+    margin: 100px auto;
+  }
+  
+  .color-indicator {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: none;
+  
+    transition: transform .2s;
+  }
+  .color-indicator:hover {
+    transform: scale(1.1);
+  }
+  .lable{
+    
+    
+    
+  }
+  .calender-date{
+    display: flex;
+    align-content: space-around;
+    justify-content: center;
+  }
+  .line{
+    background-color:  rgb(65, 63, 63); 
+     height: 5 
+  }
+  .endTime{
+    display: flex;
+    color: #999;
+    border-bottom: 2px solid;
+    border-image: radial-gradient(silver, black) 50;
+  }
+  .datePick {
+    display: flex;
+    color: rgb(153, 153, 153);
+  }
+  .startTime{
+    display: flex;
+    width: 100%;
+    color: #999;
+    border-bottom: 2px solid;
+    border-image: radial-gradient(silver, black) 50;
+  }
+  .Title2{
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-left: 0px;
+
+    /* margin-left: -170px; */
+  }
+  .timeBlock {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: none;
+  }
+   
+  .lableColor{
+    margin-left: 350px;
+  }
+  
+  .NewTask-Tittle2{
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-left: -130px;
+    margin-top: -50px;
+    text-transform: uppercase;
+  }
+  .lableIcon{
+   background-color: #fff;
+  }
+  .newTaskLableName {
+    color: white;
+  }
+  .newTaskInput {
+    border: 1px solid grey;
+    background: rgba(76, 175, 80, 0.1);
+  }
+  .dropdown-item {
+    /* border:1px solid red; */
+  }
+  .displayIcons {
+    display: flex;
+  
+  }
+  .iconOnet {
+    /* border:1px solid rgb(182, 42, 170); */
+    display: none;
+    
+  }
+  .iconTwot {
+    /* border:1px solid red; */
+    display: none;
+  }
+  .iconThreet {
+    /* border:1px solid rgb(15, 158, 58); */
+    display: none;
+  }
+  .iconFourt {
+    /* border:1px solid rgb(15, 158, 58); */
+    display: none;
+  }
+  .iconFivet {
+    /* border:1px solid rgb(15, 158, 58); */
+    display: none;
+  }
+  .iconSixt {
+    /* border:1px solid rgb(15, 158, 58); */
+    display: none;
+  }
+  #iconOne {
+    /* border:1px solid rgb(182, 42, 170); */
+  
+  }
+  #iconTwo {
+    /* border:1px solid red; */
+  
+  }
+  #iconThree {
+    /* border:1px solid rgb(15, 158, 58); */
+  
+  }
+  #dropdown-item-button {
+    /* margin-top: -16%; */
+    background-color: white;
+    color: dodgerblue;
+    margin: 2px 5px;
+  }
+  .completeBtn {
+    margin-top: 20px;
+  }
+  .completeBtnContainer {
+    display: flex;
+    justify-content: center;
+  }
+  .addIcon {
+    display: flex;
+    justify-content: center;
+  }
+  .addIcon #icon {
+    color: dodgerblue
+  }
+  .iconDropContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+  }
+  .startCont {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  #startClock{
+    width: 50px;
+    height: 50px;
+    color: grey;
+  }
+  .stupid {
+    margin-left: 20px;
+  }
+  .timeContainer {
+    display: flex;
+    align-items: center;
+  }
+  .rc-time-picker-clear-icon:after{
+    /* width: 50px;
+    height: 50px; */
+    color: black;
+    font-size: small;
+  }
+  .rc-time-picker-clear {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  color: black;
+  width: 28px;
+  height: 28px;
+  background-color: white;
+  border-radius: 5px;
+  top: 20px;
+  left: 145px;
+}
+.rc-time-picker-clear-icon {
+  color: black;
+
+}

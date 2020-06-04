@@ -1,0 +1,189 @@
+
+input[type=checkbox] {
+    width: 40px;
+    height:39px;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    -webkit-appearance: none;
+    /* outline: none; */
+    cursor: pointer;
+    color:black;
+}
+dl, ol, ul {
+    margin-top:5%;
+    list-style:none; 
+    text-align: left;
+    padding: 2px;
+    border-image: radial-gradient(silver, black) 50;
+}
+.taskListContainer {
+  overflow: auto;
+  height: 75vh;
+  padding: 0px;
+}
+.taskListContainer::-webkit-scrollbar-track-piece {
+  height: 20px;
+  width: 8px;
+} 
+.taskListContainer::-webkit-scrollbar-thumb {
+  background: rgba(192, 192, 192, 0.281);
+  border-radius: 30px;
+
+} 
+div .form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-image: radial-gradient(silver, black) 50;
+  border-bottom: 2px solid;
+  width: 90%;
+  margin-left: 5%;
+  padding-bottom: 10px;
+}
+.deleteBtn {
+  width: 70px !important;
+}
+.formStyle:hover {
+background-color: rgb(85, 84, 84);
+/* width: 95%; */
+border-radius: 15px;
+/* height:100%; */
+/* border: solid 2px rgb(158, 152, 152); */
+/* padding:5px 5px 5px 10px; */
+}
+.formStyle {
+    margin-bottom: 5px;
+}
+#formText {
+    display: block;
+    margin-top: .25rem;
+    padding: 2%;
+    /* margin-left: 10%; */
+    color:white;
+    width:100%;
+    font-size: 1em;;
+}
+
+.checkBTN {
+    color:white;
+    text-align: center;
+    height: 10%;
+}
+input[type=checkbox]:checked {
+ border: 2px solid rgb(107, 218, 218);
+ background-image: url("./check.png");
+ background-size: cover;
+ background-repeat: no-repeat;
+ width: 40px;
+ height: 40px;
+ border-radius: 50%;
+ vertical-align: middle;
+ border: 0px solid #ddd;
+ -webkit-appearance: none;
+ /* outline: none; */
+ cursor: pointer;
+ color: black;
+}
+.taskTitle {
+    display: block;
+    margin-top: .25rem;
+    padding: 2%;
+    color:white;
+    width:100%;
+    font-size: 1.7em;
+    margin-left: 0%;
+}
+.addTaskLink {
+    bottom: 10px;
+    height: 48px;
+    width: 48px;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 100%;
+    font-size: 3rem;
+
+  }
+.linkStyle {
+    margin-left: 43%;
+padding: auto;
+  }
+  .linkStyle:hover {
+    background-color: rgb(175, 174, 174);
+  }
+.completeBtn {
+
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  /* margin: 10px 10px 10px 120px; */
+  bottom: 10px;
+}
+.checkBoxChecked {
+  border: 2px solid rgb(107, 218, 218) !important;
+ background-image: url("./check.png") !important;
+ background-size: cover;
+ background-repeat: no-repeat;
+ width: 70px;
+  height: 40px;
+  border-radius: 50%;
+}
+.checkBox{
+  border: 2px solid white;
+ background: transparent;
+ background-size: cover;
+ background-repeat: no-repeat;
+ width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.completeCont {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.checkedBox {
+  margin-top: 0px;
+  width: 39px;
+ height: 39px;
+  /* border-width: 2px; */
+
+}
+#completedLink {
+  padding: 4px;
+  padding-left: 8px;
+  box-sizing: border-box;
+  height: 35px;
+  width: 177px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  text-decoration: none;
+}
+#completedLink:hover {
+  border: 1px solid silver;
+  border-radius: 20px;
+}
+.completedLinkText {
+  margin-right: 20px;
+  margin-bottom: 0;
+  padding: 0;
+}
+.completedLinkCount {
+  padding: 0;
+  margin-bottom: 0;
+  background-color: white;
+  height: 25px;
+  width: 25px;
+  font-size: .8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  color: navy;
+}

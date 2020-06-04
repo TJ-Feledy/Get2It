@@ -1,0 +1,33 @@
+.fa-bars {
+  background-color: none;
+}
+.dropButton {
+  background: none;
+  border: none;
+}
+.dropdown-item {
+  display: flex;
+  align-items: center;
+}
+.dropdown-header {
+  padding: 0;
+  padding-right: 30px;
+}
+.icon {
+  color: var(--iconColor);
+  margin-right: 10px;
+}
+.menuLogo {
+  width: 100px;
+}
+.yourTasks {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.menuTaskCount {
+  color: rgb(3, 16, 196);
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0 0 0 12px;
+}

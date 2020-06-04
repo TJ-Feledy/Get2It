@@ -1,0 +1,146 @@
+.onBoardingContainer {
+  height: 100%;
+}
+.logoImg {
+    width:30px;
+    color:white;
+}
+#arrow {
+    color: aliceblue;
+    margin-top: 15px;
+    height: 30px;
+}
+.signUp {
+    margin-top: 8px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+.custom-tag {
+    max-width: 100%;
+    height: 500px;
+    /* background: black; */
+}
+.carousel {
+    margin: 20px 54px 40px 54px;
+    width: 265px;
+    height: 300px;
+    
+}
+.imgSlide {
+    height: 350px;
+    border-radius: 8px;
+    margin-left: -1px;
+}
+.indecator {
+    margin-bottom: -90px;
+}
+a.nextBTN {
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    color:white;
+    margin-top: 50px;
+    width: 150px;
+    padding: 5px 0;
+    background-color: transparent;
+    border: solid 1px;
+    border-radius: 25px;
+    border-color: white;
+    text-decoration: none;
+}
+a.nextBTN:hover {
+  background-color: white;
+  color: rgba(41, 42, 47, 0.863);
+  font-weight: 999;
+  box-shadow: 0px 0px 10px 3px silver;
+}
+
+div.carousel.slide {
+    margin-top:20px;
+    margin-left:48px;
+ 
+}
+.fullContainer {
+   
+    display: flex;
+    justify-content: center;
+
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+@media screen and (min-width: 750px) {
+    .imgSlide {
+      height: 400px;
+      width: 300px;
+      border-radius: 8px;
+      margin-left: -1px;
+    
+    }
+    #arrow {
+        color: aliceblue;
+        margin-top: 15px;
+        height: 80px;
+        width: 30px;
+    }
+    .signUp {
+        margin-top: 8px;
+        text-align: center;
+        color: white;
+        font-size: 30px;
+    }
+    a.nextBTN {
+      z-index: 1;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-32%);
+      bottom: 230px;
+      color:white;
+      margin-top: 50px;
+      width: 150px;
+      padding: 5px 0;
+      background-color: transparent;
+      border: solid 1px;
+      border-radius: 25px;
+      border-color: white;
+      text-decoration: none;
+    }
+    
+    .indecator {
+        margin-bottom: -140px;
+        margin-left: 80px;
+        height:10px;
+    }
+    .carousel-inner {
+        width: 115%;
+  }
+    .carousel-indicators li {
+    width: 49px;
+    height: 7px;
+    margin-right: -1px;
+    margin-left: 14px;
+    }
+    .carousel-control-next {
+        position: absolute;
+        top: 160px;
+        right: -130px; 
+        background-color: grey;
+        width:50px;
+        height:80px;
+        border-radius: 10%;
+    }
+    .carousel-control-prev {
+        position: absolute;
+        top: 160px;
+        left: -91px;
+        background-color: grey;
+        width:50px;
+        height:80px;
+        border-radius: 10%;
+    }
+}
+  

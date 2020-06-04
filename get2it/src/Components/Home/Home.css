@@ -1,0 +1,220 @@
+#root {
+  height: 100%;
+}
+.home {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  /* position: relative; */
+}
+.taskModal {
+  size: 90%;
+  overflow: visible;
+  align-self: center;
+  position: absolute;
+  width: 95%;
+  max-height: 80vh;
+  top: 50px;
+  border-radius: 10px;
+  border: solid silver;
+  background-image: radial-gradient(circle at 50% 30%,rgb(110, 110, 110) 5%,rgb(110, 110, 110) 5%,rgb(6, 14, 26) 90%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-flow: column;
+}
+.editModal {
+  size: 100%;
+  overflow: visible;
+  align-self: center;
+  position: absolute;
+  width: 95%;
+  max-height: 80vh;
+  top: 50px;
+  left: 8px;
+  border-radius: 10px;
+  border: solid 1px silver;
+  background-image: radial-gradient(circle at 50% 30%,rgb(110, 110, 110) 5%,rgb(110, 110, 110) 5%,rgb(6, 14, 26) 90%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-flow: column;
+}
+.today {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.date {
+  margin: 0;
+}
+.greeting {
+  color: rgb(216, 216, 216);
+  font-size: 1.9rem;
+}
+.countContainer {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(192, 192, 192, 0.247);
+  border-radius: 100%;
+  height: 100px;
+  width: 100px;
+  position: relative;
+  margin: 15px 0;
+}
+.countContainer:hover {
+  background-color: rgba(192, 192, 192, 0.137);
+}
+.count {
+  color: white;
+  font-size: 3rem;
+}
+.total {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: gray;
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 2px;
+  top: -6px;
+}
+.homeList {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  padding: 0 20px;
+  overflow: auto;
+}
+.homeList::-webkit-scrollbar {
+  height: 20px;
+  width: 8px;
+}
+.homeList::-webkit-scrollbar-thumb {
+  background: rgba(192, 192, 192, 0.281);
+  border-radius: 30px;
+}
+.listItem {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin: 20px 0 10px 0;
+  border-image: radial-gradient(silver, black) 50;
+  border-bottom: 2px solid;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+/* .jsx-parser {
+  height: 30px;
+  width: 30px;
+} */
+#icon {
+  width: 18px;
+  margin-right: 15px;
+  margin-bottom: 16px;
+  color: rgba(192, 192, 192, 0.425);
+}
+.itemContainer {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.itemName {
+  color: rgba(255, 255, 255, 0.781);
+  text-align: start;
+  /* margin-left: 10px; */
+}
+.duration {
+  color: rgba(255, 255, 255, 0.781);
+  margin-left: 10px;
+}
+#addTaskLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 10px;
+  height: 48px;
+  width: 48px;
+  padding-bottom: 3.5px;
+  padding-left: .5px;
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 100%;
+  font-size: 3rem;
+}
+#addTaskLink:hover {
+  text-decoration: none;
+  background-color: white;
+  color: dodgerblue;
+}
+.countLink:hover {
+  text-decoration: none;
+}
+
+.editModal::-webkit-scrollbar {
+  height: 20px;
+  width: 8px;
+  /* padding: ; */
+}
+.editModal::-webkit-scrollbar-thumb {
+  background: rgba(192, 192, 192, 0.281);
+  border-radius: 30px;
+}
+.closeLink {
+  align-self: flex-end;
+  margin-right: 10px;
+  text-decoration: none;
+  color: var(--textColor);
+  z-index: 0;
+  position: absolute;
+  right: 10px;
+}
+.closeLink:hover {
+  color: white;
+}
+.noTaskContainer {
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 98px;
+}
+.bigLogoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  max-height: 100px;
+}
+.bigLogo {
+  width: 200px;
+}
+.instruction {
+  margin: 0px;
+  color: dodgerblue;
+}
+.arrow {
+  font-size: x-large;
+  color: dodgerblue;
+}

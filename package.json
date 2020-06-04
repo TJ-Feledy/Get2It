@@ -1,0 +1,19 @@
+{
+  "name": "get2it-fe",
+  "version": "1.0.0",
+  "description": "🚫 Note: All lines that start with 🚫 are instructions and should be deleted before this is posted to your portfolio. This is intended to be a guideline, feel free to add your own flare to it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lambda-School-Labs/get2it-fe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lambda-School-Labs/get2it-fe/issues"
+  },
+  "homepage": "https://github.com/Lambda-School-Labs/get2it-fe#readme"
+}

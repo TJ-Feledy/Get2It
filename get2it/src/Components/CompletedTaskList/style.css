@@ -1,0 +1,128 @@
+.completedTaskList {
+  overflow: auto;
+  height: 100%;
+}
+.completedTaskList::-webkit-scrollbar {
+    height: 20px;
+    width: 8px;
+  }
+  .completedTaskList::-webkit-scrollbar-thumb {
+    background: rgba(192, 192, 192, 0.281);
+    border-radius: 30px;
+  }
+
+input[type=checkbox] {
+    width: 40px;
+    height:39px;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: .1px solid #ddd;
+    -webkit-appearance: none;
+    /* outline: none; */
+    cursor: pointer;
+    color:black;
+}
+dl, ol, ul {
+    margin-top:5%;
+    list-style:none; 
+    text-align: left;
+    border-image: radial-gradient(silver, black) 50;
+}
+div .form-group {
+    display: flex;
+    border-image: radial-gradient(silver, black) 50;
+  border-bottom: 2px solid;
+    width: 90%;
+}
+
+.formStyle {
+    margin-bottom: 5px;
+}
+.form-text {
+    
+    /* margin-top: .25rem; */
+    padding: 2%;
+    /* margin-left: 10%; */
+    color:white;
+    width:100%;
+    font-size: 1em;;
+}
+small.form-text {
+  margin-top: 0px;
+}
+.checkBTN {
+    color:white;
+    text-align: center;
+    height: 10%;
+}
+
+.taskTitle {
+    display: block;
+    margin-top: .25rem;
+    padding: 2%;
+    color:white;
+    width:100%;
+    font-size: 1.7em;
+    margin-left: 0%;
+}
+.addTaskLink {
+    bottom: 10px;
+    height: 48px;
+    width: 48px;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    background-color: rgb(32, 66, 100);
+    color: white;
+    border-radius: 100%;
+    font-size: 3rem;
+
+  }
+.linkStyle {
+    margin-left: 43%;
+padding: auto;
+  }
+
+.completedGroup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.completeDate {
+  margin-bottom: 5px;
+  color: white;
+}
+.completeName {
+  margin-bottom: 5px;
+}
+.reUseBtn {
+    width: auto;
+    height: auto;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .reUseBtn:Hover {
+    opacity: 90%;
+  }
+  #formText.reUse {
+    display: flex;
+    text-decoration: none;
+    /* justify-content: center !important; */
+    align-items: center;
+    height: 30px;
+    width: 100px !important;
+    border: 1px solid silver;
+    border-radius: 6px;
+  }
+  .reUse:hover {
+    background-color: dodgerblue;
+  }
+  #formText {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+}
